@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getColorList, getLastColor } from "../helpers/getColors";
 
-export function useColors () {
+export const useColors = () => {
     const [color, setColor] = useState(getLastColor());
     const [colorsList, setColorList] = useState(getColorList());
 
