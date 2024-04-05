@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "https://color-picker-mf-af.netlify.app/",
+    publicPath: "https://color-picker-mf-af.netlify.app/" /* "http://localhost:3001/" */,
   },
 
   resolve: {
@@ -41,7 +41,7 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "ColorPicker",
+      name: "mf_colorpicker",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {

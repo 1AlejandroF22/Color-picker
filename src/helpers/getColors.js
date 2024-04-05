@@ -1,6 +1,6 @@
 
 export const getColorList = () =>
-    JSON.parse(localStorage.getItem("colors")) || []; 
+    JSON.parse(localStorage.getItem('colors')) || []; 
 
 export const getLastColor = () => {
     const listColor = getColorList();
